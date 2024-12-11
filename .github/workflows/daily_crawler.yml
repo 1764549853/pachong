@@ -24,5 +24,8 @@ jobs:
           pip install -r requirements.txt  # 安装依赖
 
       - name: Run the crawler
+        env:
+          USERNAME: ${{ secrets.USERNAME }}  # 使用存储的账号
+          PASSWORD: ${{ secrets.PASSWORD }}  # 使用存储的密码
         run: |
-          python test1.py  # 运行爬虫脚本
+          python test2.py  # 运行爬虫脚本
