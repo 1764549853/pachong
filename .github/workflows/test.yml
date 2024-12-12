@@ -1,13 +1,13 @@
-name: Windows Crawler
+name: Daily Crawler
 
 on:
   schedule:
-    - cron: '11 16 * * *'  # 每天下午 4:11 UTC 运行
+    - cron: '30 16 * * *'  # 每天下午 4:30 UTC 运行
   workflow_dispatch:  # 允许手动触发工作流
 
 jobs:
   run-crawler:
-    runs-on: windows-latest  # 选择 Windows 环境
+    runs-on: ubuntu-22.04  # 选择运行环境
 
     steps:
       - name: Checkout code
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.11'  # 设置为最新 Python 版本
+          python-version: '3.x'  # 设置为最新 Python 版本
 
       - name: Install dependencies
         run: |
