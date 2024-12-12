@@ -2,7 +2,7 @@ name: Daily Crawler
 
 on:
   schedule:
-    - cron: '30 16 * * *'  # 每天下午 4:30 UTC 运行
+    - cron: '35 16 * * *'  # 每天下午 4:35 UTC 运行
   workflow_dispatch:  # 允许手动触发工作流
 
 jobs:
