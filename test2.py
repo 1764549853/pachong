@@ -1,10 +1,10 @@
-#github版本 通过github secret掩盖密码
+
 import os
 import requests
 
-url = "https://www.imslr.com/member.php?mod=logging&action=login&loginsubmit=yes&handlekey=login&loginhash=LcUBc&inajax=1"
+url = os.environ.get("TARGET_URL")
 
-# 从环境变量中获取用户名和密码
+
 params = {
     "username": os.environ.get("USERNAME"),
     "password": os.environ.get("PASSWORD"),
