@@ -25,6 +25,7 @@ jobs:
 
       - name: Run the crawler
         env:
+          TARGET_URL: ${{ secrets.TARGET_URL }}  # 使用存储的网址
           USERNAME: ${{ secrets.USERNAME }}  # 使用存储的账号
           PASSWORD: ${{ secrets.PASSWORD }}  # 使用存储的密码
         run: |
