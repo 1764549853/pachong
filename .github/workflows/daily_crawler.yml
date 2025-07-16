@@ -2,7 +2,7 @@ name: Daily Crawler
 
 on:
   schedule:
-    - cron: '0 9 * * *'  # 每天 UTC 时间 9:00 运行 (对应北京时间下午 5:00)
+    - cron: '40 1 * * *'  # 每天晚上 12:10 UTC 运行
   workflow_dispatch:  # 允许手动触发工作流
 
 jobs:
@@ -29,4 +29,4 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}  # 使用存储的账号
           PASSWORD: ${{ secrets.PASSWORD }}  # 使用存储的密码
         run: |
-          python test2.py  # 运行爬虫脚本，只需要运行一次
+          python test2.py  # 运行爬虫脚本
