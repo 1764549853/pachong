@@ -6,8 +6,6 @@ import requests
 url = os.environ.get("TARGET_URL")
 
 # 从环境变量中获取用户名和密码
-=======
-
 import os
 import requests
 
