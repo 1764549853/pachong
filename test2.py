@@ -13,8 +13,6 @@ import requests
 
 url = os.environ.get("TARGET_URL")
 
-
->>>>>>> b2a95858c29dad1f770e98691655bcbbab1d1765
 params = {
     "username": os.environ.get("USERNAME"),
     "password": os.environ.get("PASSWORD"),
